@@ -1,6 +1,10 @@
 grammar Test;
 
-prog : expr {System.Console.WriteLine($expr.value);};
+@header{
+	using System;
+}
+
+prog : expr {Console.WriteLine($expr.value);};
 
 expr returns [int value]: additive_expr {$value=$additive_expr.value;};
 
@@ -20,7 +24,7 @@ multiplicative_expr returns [int value]:
 
 //äÑÇËéZ
 division_expr returns [int value]:
-	a=factor{$value=$a.value;} (DIV b=factor {$value/=$b.value;})* ;
+	factor{$value=$factor.value;} (DIV factor {$value/=$factor.value;})* ;
 
 //àˆêî
 factor returns [int value]: 

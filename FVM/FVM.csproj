@@ -50,12 +50,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FIrInterpreter.g4.lexer.cs">
+      <DependentUpon>FIrInterpreter.g4</DependentUpon>
+    </Compile>
+    <Compile Include="FIrInterpreter.g4.parser.cs">
+      <DependentUpon>FIrInterpreter.g4</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="packages.config" />
+    <Antlr4 Include="FIrInterpreter.g4">
+      <Generator>MSBuild:Compile</Generator>
+      <CustomToolNamespace>FVM</CustomToolNamespace>
+    </Antlr4>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
     <Antlr4 Include="Test.g4">
       <Generator>MSBuild:Compile</Generator>
       <CustomToolNamespace>FVM</CustomToolNamespace>
