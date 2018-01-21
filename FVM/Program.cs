@@ -17,12 +17,11 @@ namespace FVM
             {
                 string parsedString = Console.ReadLine();
                 var inputStream = new AntlrInputStream(parsedString);
-                var lexer = new TestLexer(inputStream);
+                var lexer = new FIrInterpreterLexer(inputStream);
                 var commonTokenStream = new CommonTokenStream(lexer);
-                var parser = new TestParser(commonTokenStream);
-                var graphContext = parser.prog();
+                var parser = new FIrInterpreterParser(commonTokenStream);
+                var graphContext = parser.entry();
                 Console.WriteLine(graphContext.ToStringTree());
-                Console.WriteLine(graphContext.expr().additive_expr().multiplicative_expr().Length);
             }
         }
     }

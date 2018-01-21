@@ -8,16 +8,20 @@ grammar FIrInterpreter;
 	using System;
 }
 
-entry
-	:	a=INT{Console.WriteLine($a);}
-	;
+entry:	
+	literal{Console.WriteLine($literal.value);}
+;
+
+literal returns [string value]:
+	(a=INT|a=REAL){$value=$a.text;}
+;
 
 /*
  * Lexer Rules
  */
 
 INT:[0-9]+;
-REAL:[0-9]+;
+REAL:[0-9]+'.'[0-9]+;
 WS
 	:	' ' -> channel(HIDDEN)
 	;

@@ -50,12 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FIrInterpreter.g4.lexer.cs">
-      <DependentUpon>FIrInterpreter.g4</DependentUpon>
-    </Compile>
-    <Compile Include="FIrInterpreter.g4.parser.cs">
-      <DependentUpon>FIrInterpreter.g4</DependentUpon>
-    </Compile>
+    <Compile Include="Interpreter\Expr.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
