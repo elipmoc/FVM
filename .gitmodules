@@ -1,0 +1,3 @@
+[submodule "FIRParser"]
+	path = FIRParser
+	url = https://github.com/elipmoc/FIRParser.git
