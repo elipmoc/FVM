@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 namespace FVM.Interpreter
 {
     //ベースとなる式
-    interface Expr<T>
+    public interface Expr<T>
     {
         T Result();
     }
 
     //定数を返す式
-    class ConstantExpr<T> : Expr<T>
+    public class ConstantExpr<T> : Expr<T>
     {
         T value;
         public ConstantExpr(T value)

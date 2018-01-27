@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace FVM.Interpreter
 {
-    static class Order
+    public static class Order
     {
-        static void output<T>(Expr<T> expr)
+        public static void output<T>(Expr<T> expr)
         {
             Console.WriteLine(expr.Result());
         }
