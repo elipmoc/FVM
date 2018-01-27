@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Antlr4.Runtime;
 using Antlr4.Runtime.Tree;
-
+using FIRParser;
 
 namespace FVM
 {
@@ -14,6 +14,7 @@ namespace FVM
 
         static void Main(string[] args)
         {
+            new FIRParser.Hello();
             while (true)
             {
                 string parsedString = Console.ReadLine();

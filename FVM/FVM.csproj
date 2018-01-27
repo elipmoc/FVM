@@ -69,6 +69,12 @@
       <CustomToolNamespace>FVM</CustomToolNamespace>
     </Antlr4>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FIRParser\FIRParser\FIRParser.csproj">
+      <Project>{362f495c-cee4-4aa9-843b-0128b9945850}</Project>
+      <Name>FIRParser</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
